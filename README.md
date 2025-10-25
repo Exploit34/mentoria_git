@@ -39,6 +39,31 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
 
+## 🧑‍💻 Flujo de trabajo con Git
+
+Objetivo
+Practicar un flujo completo de colaboración en GitHub utilizando ramas, commits descriptivos y la herramienta **GitHub CLI (`gh`)**.
+
+Ten en cuenta los siguientes pasos:
+
+- Crear una nueva rama con el número de issue o nombre de tarea
+  ```bash
+    git checkout -b issue-3-endpoint-dinamico
+  ```
+- Resolver la tarea asignada
+- Hacer commits descriptivos
+- Subir la rama y abrir un Pull Request hacia main
+- Hacer commits descriptivos (usa prefijos como feat:, fix:, style:, docs: o refactor:)
+- actualizar las ramas de trabajo con main antes de hacer el PR
+
+Criterios:
+- El PR está bien descrito
+- Deben de utilizar gh para crear el PR
+- Los commits están limpios
+- La rama contiene solo los cambios relacionados con su issue
+- No hay archivos innecesarios modificados
+- El PR fue revisado y aprobado por el mentor antes del merge.
+
 ## ⚙️ Configuración del entorno MongoDB
 
 El proyecto usa **MongoDB** como base de datos.
