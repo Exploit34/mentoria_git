@@ -38,3 +38,33 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+
+## ⚙️ Configuración del entorno MongoDB
+
+El proyecto usa **MongoDB** como base de datos.
+
+Puedes levantarlo fácilmente con Docker:
+
+```bash
+    docker run -d \
+    --name mongodb \
+    -p 27017:27017 \
+    -e MONGO_INITDB_ROOT_USERNAME=<user_root> \
+    -e MONGO_INITDB_ROOT_PASSWORD=<your_password> \
+    mongo:6.0
+```
+
+```bash
+    use my_database;
+
+    db.createUser({
+    user: "mi_usuario",
+    pwd: "mi_contraseña_segura",
+    roles: [
+        { role: "readWrite", db: "my_database" }
+    ]
+    });
+```
+
+`URL=mongodb://<user_root>:<your_password>@localhost:27017/my_database?authSource=<user_root>` Ingreso local
+`URL=mongodb://<user>:<user_password>@localhost:27017/<database>` para aplicacion
